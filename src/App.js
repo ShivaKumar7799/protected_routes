@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NavBar from './Pages/NavBar'
 import PageNotFound from './Pages/PageNotFound'
 import LoginPage from './Pages/LoginPage'
+import UsersPage from './Pages/Users/UsersPage'
+import SingleUser from './Pages/Users/SingleUser'
 function App() {
   return (
     <div>
@@ -17,6 +19,8 @@ function App() {
           <Route path='/about' element = { <AboutPage /> } />
           <Route path='/contact' element = {<ContactPage />} />
           <Route path ="*" element = {<PageNotFound />} />
+          <Route path ="/users" element = {<UsersPage />} />
+          <Route path ="/user/:id" element = {<SingleUser />} />
         </Routes>
       </BrowserRouter>
     </div>
